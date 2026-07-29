@@ -13,7 +13,7 @@ import {
   CalendarDays,
   CheckCircle2,
   Play,
-  Info
+  Info,
 } from "lucide-react";
 
 export default function ArenaFonteNovaLanding() {
@@ -21,12 +21,14 @@ export default function ArenaFonteNovaLanding() {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+    },
   };
 
   return (
     <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-gray-300">
-      
       {/* HERO SECTION - Destaque Gray */}
       <section className="h-screen relative overflow-hidden flex flex-col items-center justify-center px-6 lg:px-8 bg-gray-700">
         <motion.div
@@ -43,21 +45,26 @@ export default function ArenaFonteNovaLanding() {
             <span className="text-gray-400">Arena Fonte Nova.</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
-            Automação inteligente e gestão de espaços com IA integrada ao WhatsApp. 
-            A inovação invisível que transforma a experiência corporativa.
+            Automação inteligente e gestão de espaços com IA integrada ao
+            WhatsApp. A inovação invisível que transforma a experiência
+            corporativa.
           </p>
 
-          <motion.div 
+          <motion.div
             className="mt-20 text-gray-300 flex flex-col items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 1 }}
           >
             <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center p-1 mb-2">
-              <motion.div 
+              <motion.div
                 className="w-1 h-2 bg-gray-300 rounded-full"
                 animate={{ y: [0, 12, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.5,
+                  ease: "easeInOut",
+                }}
               />
             </div>
           </motion.div>
@@ -71,7 +78,8 @@ export default function ArenaFonteNovaLanding() {
             Solução Completa 360º.
           </h2>
           <p className="text-xl text-zinc-500 max-w-2xl mx-auto">
-            Hardware dedicado e software desenhado para trabalhar em perfeita harmonia.
+            Hardware dedicado e software desenhado para trabalhar em perfeita
+            harmonia.
           </p>
         </motion.div>
 
@@ -82,12 +90,17 @@ export default function ArenaFonteNovaLanding() {
             {...fadeIn}
           >
             <div className="mb-8">
-              <Monitor size={40} className="text-zinc-900 mb-6" strokeWidth={1.5} />
+              <Monitor
+                size={40}
+                className="text-zinc-900 mb-6"
+                strokeWidth={1.5}
+              />
               <h3 className="text-3xl font-semibold tracking-tight mb-3 text-zinc-900">
                 100 Tablets Corporativos.
               </h3>
               <p className="text-zinc-600 text-lg">
-                Design elegante nas portas das salas, tecnologia robusta no interior.
+                Design elegante nas portas das salas, tecnologia robusta no
+                interior.
               </p>
             </div>
 
@@ -102,10 +115,19 @@ export default function ArenaFonteNovaLanding() {
               {[
                 { icon: Monitor, text: "Tela 10.1 IPS HD/FHD Touchscreen" },
                 { icon: Wifi, text: "Wi-Fi Dual-Band (2.4/5GHz) + Bluetooth" },
-                { icon: Battery, text: "Fonte bivolt + Bateria backup (6000 mAh)" },
-                { icon: ShieldCheck, text: "Compatível com suportes antifurto" },
+                {
+                  icon: Battery,
+                  text: "Fonte bivolt + Bateria backup (6000 mAh)",
+                },
+                {
+                  icon: ShieldCheck,
+                  text: "Compatível com suportes antifurto",
+                },
               ].map((item, i) => (
-                <li key={i} className="flex items-center gap-4 text-zinc-700 font-medium">
+                <li
+                  key={i}
+                  className="flex items-center gap-4 text-zinc-700 font-medium"
+                >
                   <div className="w-8 h-8 rounded-full bg-white border border-zinc-200 flex items-center justify-center shrink-0 shadow-sm">
                     <item.icon size={16} className="text-zinc-900" />
                   </div>
@@ -126,12 +148,17 @@ export default function ArenaFonteNovaLanding() {
                 Desenvolvimento & IA.
               </h3>
               <p className="text-zinc-600 text-lg">
-                Integração fluida e inteligente via WhatsApp para reservas instantâneas.
+                Integração fluida e inteligente via WhatsApp para reservas
+                instantâneas.
               </p>
             </div>
 
             <div className="w-full h-64 bg-white rounded-2xl mb-8 flex flex-col items-center justify-center text-zinc-400 overflow-hidden relative border border-zinc-200">
-              <Smartphone size={48} className="mb-3 opacity-30" strokeWidth={1} />
+              <Smartphone
+                size={48}
+                className="mb-3 opacity-30"
+                strokeWidth={1}
+              />
               <span className="text-xs font-semibold tracking-widest uppercase opacity-60">
                 [ Tela do Sistema ]
               </span>
@@ -141,10 +168,16 @@ export default function ArenaFonteNovaLanding() {
               {[
                 { icon: Smartphone, text: "Sistema web/mobile completo" },
                 { icon: Bot, text: "IA integrada diretamente ao WhatsApp" },
-                { icon: CheckCircle2, text: "Configuração e implantação em nuvem" },
+                {
+                  icon: CheckCircle2,
+                  text: "Configuração e implantação em nuvem",
+                },
                 { icon: Info, text: "Treinamento completo para a equipe" },
               ].map((item, i) => (
-                <li key={i} className="flex items-center gap-4 text-zinc-700 font-medium">
+                <li
+                  key={i}
+                  className="flex items-center gap-4 text-zinc-700 font-medium"
+                >
                   <div className="w-8 h-8 rounded-full bg-white border border-zinc-200 flex items-center justify-center shrink-0 shadow-sm">
                     <item.icon size={16} className="text-zinc-900" />
                   </div>
@@ -164,7 +197,8 @@ export default function ArenaFonteNovaLanding() {
               Veja em ação.
             </h2>
             <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-              Experimente a fluidez da integração em tempo real entre a interface física e nossa IA.
+              Experimente a fluidez da integração em tempo real entre a
+              interface física e nossa IA.
             </p>
           </motion.div>
 
@@ -201,11 +235,16 @@ export default function ArenaFonteNovaLanding() {
           >
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-zinc-200 pb-10 mb-10">
               <div>
-                <p className="text-zinc-500 font-medium mb-2 tracking-wide uppercase text-sm">Hardware + Software + Implantação</p>
-                <h3 className="text-5xl md:text-6xl font-bold tracking-tight text-zinc-900">R$ 100.000</h3>
+                <p className="text-zinc-500 font-medium mb-2 tracking-wide uppercase text-sm">
+                  Hardware + Software + Implantação
+                </p>
+                <h3 className="text-5xl md:text-6xl font-bold tracking-tight text-zinc-900">
+                  R$ 100.000
+                </h3>
               </div>
               <div className="mt-6 md:mt-0 bg-white border border-zinc-200 text-zinc-700 px-6 py-3 rounded-full font-medium flex items-center gap-3 text-sm shadow-sm">
-                <CheckCircle2 size={18} className="text-zinc-900" /> 3 Meses Grátis de Licenciamento
+                <CheckCircle2 size={18} className="text-zinc-900" /> 3 Meses
+                Grátis de Licenciamento
               </div>
             </div>
 
@@ -217,27 +256,46 @@ export default function ArenaFonteNovaLanding() {
                 <ul className="space-y-5">
                   <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
                     <span>100 Tablets (R$ 850/unid)</span>
-                    <strong className="text-zinc-900 font-medium">R$ 85.000,00</strong>
+                    <strong className="text-zinc-900 font-medium">
+                      R$ 85.000,00
+                    </strong>
                   </li>
                   <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
                     <span>Desenvolvimento do Sistema</span>
-                    <strong className="text-zinc-900 font-medium">R$ 15.000,00</strong>
+                    <strong className="text-zinc-900 font-medium">
+                      R$ 15.000,00
+                    </strong>
                   </li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-zinc-900 font-semibold text-lg mb-6 flex items-center gap-3">
-                  <CalendarDays size={20} className="text-zinc-500" /> Pós 3 Meses (Licenciamento)
+                  <CalendarDays size={20} className="text-zinc-500" /> Pós 3
+                  Meses (Licenciamento)
                 </h4>
                 <ul className="space-y-5">
                   <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
-                    <span>Valor Inicial <span className="text-xs text-zinc-400 block">por sala</span></span>
-                    <strong className="text-zinc-900 font-medium text-right">US$ 10,00/mês</strong>
+                    <span>
+                      Valor Inicial{" "}
+                      <span className="text-xs text-zinc-400 block">
+                        por sala
+                      </span>
+                    </span>
+                    <strong className="text-zinc-900 font-medium text-right">
+                      US$ 10,00/mês
+                    </strong>
                   </li>
                   <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
-                    <span>Modelos Avançados <span className="text-xs text-zinc-400 block">por sala (Se necessário)</span></span>
-                    <strong className="text-zinc-900 font-medium text-right">Até US$ 15,00/mês</strong>
+                    <span>
+                      Modelos Avançados{" "}
+                      <span className="text-xs text-zinc-400 block">
+                        por sala (Se necessário)
+                      </span>
+                    </span>
+                    <strong className="text-zinc-900 font-medium text-right">
+                      Até US$ 15,00/mês
+                    </strong>
                   </li>
                 </ul>
               </div>
@@ -253,15 +311,24 @@ export default function ArenaFonteNovaLanding() {
           {...fadeIn}
         >
           <div className="w-12 h-12 rounded-full bg-white border border-zinc-200 flex items-center justify-center shrink-0 shadow-sm">
-            <AlertCircle className="text-zinc-900" size={24} strokeWidth={1.5} />
+            <AlertCircle
+              className="text-zinc-900"
+              size={24}
+              strokeWidth={1.5}
+            />
           </div>
           <div>
             <h4 className="font-semibold text-zinc-900 text-lg mb-2">
               Nota sobre Infraestrutura Local
             </h4>
             <p className="text-zinc-600 leading-relaxed">
-              A infraestrutura local necessária para o funcionamento presencial (como rede Wi-Fi com cobertura para os 100 pontos, cabeamento, suporte técnico local, pontos de energia e fixação mecânica){" "}
-              <strong className="text-zinc-900">não está inclusa neste orçamento</strong> e deve ser providenciada à parte pelo cliente.
+              A infraestrutura local necessária para o funcionamento presencial
+              (como rede Wi-Fi com cobertura para os 100 pontos, cabeamento,
+              suporte técnico local, pontos de energia e fixação mecânica){" "}
+              <strong className="text-zinc-900">
+                não está inclusa neste orçamento
+              </strong>{" "}
+              e deve ser providenciada à parte pelo cliente.
             </p>
           </div>
         </motion.div>
@@ -270,7 +337,6 @@ export default function ArenaFonteNovaLanding() {
       {/* PAYMENT & DELIVERY - Destaque Gray */}
       <section className="py-32 px-6 lg:px-8 bg-gray-700 border-t border-gray-600">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-stretch">
-          
           <motion.div {...fadeIn} className="flex flex-col h-full">
             <h3 className="text-2xl font-bold tracking-tight mb-8 text-white">
               Pagamento.
@@ -278,7 +344,11 @@ export default function ArenaFonteNovaLanding() {
             <ul className="flex flex-col gap-4 flex-1">
               <li className="bg-gray-600 border border-gray-500 p-8 rounded-[1.5rem] flex items-center gap-5 flex-1 transition-all hover:border-gray-400 shadow-lg">
                 <div className="bg-gray-800 w-14 h-14 rounded-full flex items-center justify-center shrink-0 shadow-inner">
-                  <CreditCard className="text-white" size={24} strokeWidth={1.5} />
+                  <CreditCard
+                    className="text-white"
+                    size={24}
+                    strokeWidth={1.5}
+                  />
                 </div>
                 <div>
                   <strong className="block text-white text-lg font-semibold mb-1">
@@ -291,7 +361,11 @@ export default function ArenaFonteNovaLanding() {
               </li>
               <li className="bg-gray-600 border border-gray-500 p-8 rounded-[1.5rem] flex items-center gap-5 flex-1 transition-all hover:border-gray-400 shadow-lg">
                 <div className="bg-gray-800 w-14 h-14 rounded-full flex items-center justify-center shrink-0 shadow-inner">
-                  <CreditCard className="text-white" size={24} strokeWidth={1.5} />
+                  <CreditCard
+                    className="text-white"
+                    size={24}
+                    strokeWidth={1.5}
+                  />
                 </div>
                 <div>
                   <strong className="block text-white text-lg font-semibold mb-1">
@@ -321,7 +395,6 @@ export default function ArenaFonteNovaLanding() {
               </p>
             </div>
           </motion.div>
-
         </div>
       </section>
 
