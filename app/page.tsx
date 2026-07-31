@@ -50,24 +50,7 @@ export default function ArenaFonteNovaLanding() {
             corporativa.
           </p>
 
-          <motion.div
-            className="mt-20 text-gray-300 flex flex-col items-center justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 1 }}
-          >
-            <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center p-1 mb-2">
-              <motion.div
-                className="w-1 h-2 bg-gray-300 rounded-full"
-                animate={{ y: [0, 12, 0] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 1.5,
-                  ease: "easeInOut",
-                }}
-              />
-            </div>
-          </motion.div>
+          
         </motion.div>
       </section>
 
@@ -75,7 +58,7 @@ export default function ArenaFonteNovaLanding() {
       <section className="py-32 px-6 lg:px-8 max-w-7xl mx-auto">
         <motion.div className="text-center mb-20" {...fadeIn}>
           <h2 className="text-4xl font-bold tracking-tight text-zinc-900 mb-4">
-            Solução Completa 360º.
+            Solução Completa
           </h2>
           <p className="text-xl text-zinc-500 max-w-2xl mx-auto">
             Hardware dedicado e software desenhado para trabalhar em perfeita
@@ -96,32 +79,34 @@ export default function ArenaFonteNovaLanding() {
                 strokeWidth={1.5}
               />
               <h3 className="text-3xl font-semibold tracking-tight mb-3 text-zinc-900">
-                100 Tablets Corporativos.
+                100 Tablets + Suportes.
               </h3>
               <p className="text-zinc-600 text-lg">
-                Design elegante nas portas das salas, tecnologia robusta no
-                interior.
+                Design elegante nas portas das salas. <br></br><br></br>
               </p>
             </div>
 
-            <div className="w-full h-64 rounded-2xl mb-8 flex flex-col items-center justify-center text-zinc-400 bg-white overflow-hidden relative border border-zinc-200">
-              <Monitor size={48} className="mb-3 opacity-30" strokeWidth={1} />
-              <span className="text-xs font-semibold tracking-widest uppercase opacity-60">
-                [ Foto do Hardware ]
+            <div className="w-full h-100 rounded-2xl mb-8 flex flex-col items-center justify-center text-zinc-400 bg-white overflow-hidden relative border border-zinc-200">
+              <span className="text-xs font-semibold tracking-widest uppercase">
+                <img
+                  src="/tablet.png"
+                  alt=""
+                  className="w-full h-full object-contain"
+                />
               </span>
             </div>
 
             <ul className="space-y-4">
               {[
-                { icon: Monitor, text: "Tela 10.1 IPS HD/FHD Touchscreen" },
-                { icon: Wifi, text: "Wi-Fi Dual-Band (2.4/5GHz) + Bluetooth" },
+                { icon: Monitor, text: "Tela 10.1 Polegadas" },
+                { icon: Wifi, text: "Wi-Fi" },
                 {
                   icon: Battery,
-                  text: "Fonte bivolt + Bateria backup (6000 mAh)",
+                  text: "Bateria (8000 mAh)",
                 },
                 {
-                  icon: ShieldCheck,
-                  text: "Compatível com suportes antifurto",
+                  icon: Monitor,
+                  text: "Resolução do display: 1280X800",
                 },
               ].map((item, i) => (
                 <li
@@ -153,20 +138,13 @@ export default function ArenaFonteNovaLanding() {
               </p>
             </div>
 
-            <div className="w-full h-64 bg-white rounded-2xl mb-8 flex flex-col items-center justify-center text-zinc-400 overflow-hidden relative border border-zinc-200">
-              <Smartphone
-                size={48}
-                className="mb-3 opacity-30"
-                strokeWidth={1}
-              />
-              <span className="text-xs font-semibold tracking-widest uppercase opacity-60">
-                [ Tela do Sistema ]
-              </span>
+            <div className="w-full h-100 bg-[#070B19] rounded-2xl mb-8 overflow-hidden relative border border-zinc-200">
+              <img src="/sistema.png" alt="Sistema" className="w-full h-full object-contain"/>
             </div>
 
             <ul className="space-y-4">
               {[
-                { icon: Smartphone, text: "Sistema web/mobile completo" },
+                { icon: Smartphone, text: "Sistema web completo" },
                 { icon: Bot, text: "IA integrada diretamente ao WhatsApp" },
                 {
                   icon: CheckCircle2,
@@ -255,7 +233,7 @@ export default function ArenaFonteNovaLanding() {
                 </h4>
                 <ul className="space-y-5">
                   <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
-                    <span>100 Tablets (R$ 850/unid)</span>
+                    <span>100 Tablets + Suportes (R$ 850/unid)</span>
                     <strong className="text-zinc-900 font-medium">
                       R$ 85.000,00
                     </strong>
