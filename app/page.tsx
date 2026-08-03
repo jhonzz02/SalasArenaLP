@@ -49,8 +49,6 @@ export default function ArenaFonteNovaLanding() {
             WhatsApp. A inovação invisível que transforma a experiência
             corporativa.
           </p>
-
-          
         </motion.div>
       </section>
 
@@ -82,7 +80,8 @@ export default function ArenaFonteNovaLanding() {
                 100 Tablets + Suportes.
               </h3>
               <p className="text-zinc-600 text-lg">
-                Design elegante nas portas das salas. <br></br><br></br>
+                Design elegante nas portas das salas. <br></br>
+                <br></br>
               </p>
             </div>
 
@@ -139,7 +138,11 @@ export default function ArenaFonteNovaLanding() {
             </div>
 
             <div className="w-full h-100 bg-[#070B19] rounded-2xl mb-8 overflow-hidden relative border border-zinc-200">
-              <img src="/sistema.png" alt="Sistema" className="w-full h-full object-contain"/>
+              <img
+                src="/sistema.png"
+                alt="Sistema"
+                className="w-full h-full object-contain"
+              />
             </div>
 
             <ul className="space-y-4">
@@ -181,16 +184,17 @@ export default function ArenaFonteNovaLanding() {
           </motion.div>
 
           <motion.div
-            className="relative w-full aspect-video bg-gray-600 rounded-[2rem] shadow-2xl overflow-hidden flex items-center justify-center border border-gray-500 group cursor-pointer"
+            className="w-full aspect-video overflow-hidden"
             {...fadeIn}
           >
-            {/* Play Button Premium */}
-            <div className="relative z-10 flex flex-col items-center">
-              <div className="w-20 h-20 bg-gray-800/80 backdrop-blur-md border border-gray-500 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-gray-800 group-hover:border-gray-400">
-                <Play size={32} className="text-white ml-2" fill="white" />
-              </div>
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-800/20 to-transparent"></div>
+            <video
+              className="w-full h-full object-cover"
+              controls
+              preload="metadata"
+            >
+              <source src="/teste.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeos.
+            </video>
           </motion.div>
         </div>
       </section>
