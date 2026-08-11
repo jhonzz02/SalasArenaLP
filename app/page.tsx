@@ -192,6 +192,11 @@ export default function ArenaFonteNovaLanding() {
             </ul>
           </motion.div>
         </div>
+        <h2 className="text-4xl font-bold tracking-tight text-zinc-900 mb-4 text-center mt-8">
+          Dashboard
+        </h2>
+        <p className="text-xl text-zinc-500 max-w-4xl mx-auto mt-8">Será disponibilizado um dashboard administrativo, permitindo à equipe gerenciar, acompanhar e consultar os agendamentos de forma centralizada, sempre que necessário.
+</p>
       </section>
 
       {/* CARROSSEL MANUAL */}
