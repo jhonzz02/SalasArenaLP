@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Monitor,
@@ -7,12 +7,10 @@ import {
   Bot,
   Wifi,
   Battery,
-  ShieldCheck,
   AlertCircle,
   CreditCard,
   CalendarDays,
   CheckCircle2,
-  Play,
   Info,
 } from "lucide-react";
 
@@ -26,7 +24,33 @@ export default function ArenaFonteNovaLanding() {
       ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
     },
   };
-
+  const slides = [
+    {
+      title: "Automação inteligente",
+      description:
+        "Nossa IA interpreta as solicitações e executa as ações automaticamente.",
+      image: "/1.png",
+    },
+    {
+      title: "Integração em tempo real",
+      description:
+        "Acompanhe a comunicação entre a interface física e nossa IA.",
+      image: "/2.png",
+    },
+    {
+      title: "Experiência simplificada",
+      description:
+        "Uma experiência fluida, intuitiva e integrada do início ao fim.",
+      image: "/3.png",
+    },
+    {
+      title: "Interface dinâmica com propagandas",
+      description:
+        "Durante o timer das propagandas, a interface se adapta para exibir uma sequência de anúncios no painel lateral, mantendo as principais informações da sala sempre visíveis e acessíveis.",
+      image: "/4.png",
+    },
+  ];
+  const [currentSlide, setCurrentSlide] = useState(0);
   return (
     <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-gray-300">
       {/* HERO SECTION - Destaque Gray */}
@@ -170,32 +194,84 @@ export default function ArenaFonteNovaLanding() {
         </div>
       </section>
 
-      {/* VIDEO DEMO SECTION - Destaque Gray */}
-      <section className="py-32 px-6 lg:px-8 bg-gray-700">
-        <div className="max-w-5xl mx-auto">
+      {/* CARROSSEL MANUAL */}
+      <section className="w-full py-16 md:py-24 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
           <motion.div className="text-center mb-16" {...fadeIn}>
-            <h2 className="text-4xl font-bold tracking-tight text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold">
               Veja em ação.
             </h2>
-            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+
+            <p className="mt-4 text-base md:text-lg max-w-2xl mx-auto">
               Experimente a fluidez da integração em tempo real entre a
               interface física e nossa IA.
             </p>
           </motion.div>
 
-          <motion.div
-            className="w-full aspect-video overflow-hidden"
-            {...fadeIn}
-          >
-            <video
-              className="w-full h-full object-cover"
-              controls
-              preload="metadata"
-            >
-              <source src="/teste.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeos.
-            </video>
+          {/* SLIDE */}
+          <motion.div key={currentSlide} className="w-full" {...fadeIn}>
+            <div className="relative w-full aspect-video overflow-hidden rounded-2xl">
+              <img
+                src={slides[currentSlide].image}
+                alt={slides[currentSlide].title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* INFORMAÇÕES */}
+            <div className="text-center mt-8">
+              <h3 className="text-2xl font-semibold">
+                {slides[currentSlide].title}
+              </h3>
+
+              <p className="mt-3 max-w-2xl mx-auto text-gray-600">
+                {slides[currentSlide].description}
+              </p>
+            </div>
           </motion.div>
+
+          {/* CONTROLES */}
+          <div className="flex items-center justify-between mt-8">
+            {/* ANTERIOR */}
+            <button
+              onClick={() =>
+                setCurrentSlide((prev) =>
+                  prev === 0 ? slides.length - 1 : prev - 1,
+                )
+              }
+              className="px-5 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition"
+            >
+              ← Anterior
+            </button>
+
+            {/* INDICADORES */}
+            <div className="flex items-center gap-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`h-2.5 rounded-full transition-all ${
+                    currentSlide === index
+                      ? "w-8 bg-black"
+                      : "w-2.5 bg-gray-300"
+                  }`}
+                  aria-label={`Ir para slide ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* PRÓXIMO */}
+            <button
+              onClick={() =>
+                setCurrentSlide((prev) =>
+                  prev === slides.length - 1 ? 0 : prev + 1,
+                )
+              }
+              className="px-5 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition"
+            >
+              Próximo →
+            </button>
+          </div>
         </div>
       </section>
 
