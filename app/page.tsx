@@ -105,7 +105,7 @@ export default function ArenaFonteNovaLanding() {
               </h3>
               <p className="text-zinc-600 text-lg">
                 Design elegante nas portas das salas. <br></br>
-                <br></br>
+                (imagem ilustrativa, não representa o modelo final do tablet)
               </p>
             </div>
 
@@ -195,12 +195,15 @@ export default function ArenaFonteNovaLanding() {
         <h2 className="text-4xl font-bold tracking-tight text-zinc-900 mb-4 text-center mt-8">
           Dashboard
         </h2>
-        <p className="text-xl text-zinc-500 max-w-4xl mx-auto mt-8">Será disponibilizado um dashboard administrativo, permitindo à equipe gerenciar, acompanhar e consultar os agendamentos de forma centralizada, sempre que necessário.
-</p>
+        <p className="text-xl text-zinc-500 max-w-4xl mx-auto mt-8">
+          Será disponibilizado um dashboard administrativo, permitindo à equipe
+          gerenciar, acompanhar e consultar os agendamentos de forma
+          centralizada, sempre que necessário.
+        </p>
       </section>
 
       {/* CARROSSEL MANUAL */}
-      <section className="w-full py-16 md:py-24 overflow-hidden">
+      <section className="w-full overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <motion.div className="text-center mb-16" {...fadeIn}>
             <h2 className="text-3xl md:text-4xl font-semibold">
@@ -302,7 +305,7 @@ export default function ArenaFonteNovaLanding() {
                   Hardware + Software + Implantação
                 </p>
                 <h3 className="text-5xl md:text-6xl font-bold tracking-tight text-zinc-900">
-                  R$ 100.000
+                  R$ 151.200
                 </h3>
               </div>
               <div className="mt-6 md:mt-0 bg-white border border-zinc-200 text-zinc-700 px-6 py-3 rounded-full font-medium flex items-center gap-3 text-sm shadow-sm">
@@ -318,9 +321,15 @@ export default function ArenaFonteNovaLanding() {
                 </h4>
                 <ul className="space-y-5">
                   <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
-                    <span>100 Tablets + Suportes (R$ 850/unid)</span>
+                    <span>100 Tablets + Suportes (R$ ?/unid)</span>
                     <strong className="text-zinc-900 font-medium">
-                      R$ 85.000,00
+                      R$ 120.000,00
+                    </strong>
+                  </li>
+                  <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
+                    <span>Imposto (%12)</span>
+                    <strong className="text-zinc-900 font-medium">
+                      R$ 16.200,00
                     </strong>
                   </li>
                   <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
@@ -334,7 +343,7 @@ export default function ArenaFonteNovaLanding() {
 
               <div>
                 <h4 className="text-zinc-900 font-semibold text-lg mb-6 flex items-center gap-3">
-                  <CalendarDays size={20} className="text-zinc-500" /> Pós 3
+                  <CalendarDays size={20} className="text-zinc-500" /> Após 3
                   Meses (Licenciamento)
                 </h4>
                 <ul className="space-y-5">
@@ -342,22 +351,22 @@ export default function ArenaFonteNovaLanding() {
                     <span>
                       Valor Inicial{" "}
                       <span className="text-xs text-zinc-400 block">
-                        por sala
+                        20 Salas
                       </span>
                     </span>
                     <strong className="text-zinc-900 font-medium text-right">
-                      US$ 10,00/mês
+                      R$ 4.000,00/mês
                     </strong>
                   </li>
                   <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
                     <span>
-                      Modelos Avançados{" "}
+                      Valor Adicional por sala{" "}
                       <span className="text-xs text-zinc-400 block">
-                        por sala (Se necessário)
+                        até 40 salas
                       </span>
                     </span>
                     <strong className="text-zinc-900 font-medium text-right">
-                      Até US$ 15,00/mês
+                      + R$ 100,00/mês por sala
                     </strong>
                   </li>
                 </ul>
@@ -368,7 +377,8 @@ export default function ArenaFonteNovaLanding() {
       </section>
 
       {/* ALERT SECTION - Fundo Branco */}
-      <section className="pb-32 px-6 lg:px-8 max-w-4xl mx-auto bg-white">
+      <section className="pb-32 px-6 lg:px-8 max-w-4xl mx-auto bg-white flex flex-col gap-6">
+        {/* infra local */}
         <motion.div
           className="bg-zinc-50 border border-zinc-200 p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start shadow-sm"
           {...fadeIn}
@@ -392,6 +402,42 @@ export default function ArenaFonteNovaLanding() {
                 não está inclusa neste orçamento
               </strong>{" "}
               e deve ser providenciada à parte pelo cliente.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* equipe */}
+        <motion.div
+          className="bg-zinc-50 border border-zinc-200 p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start shadow-sm"
+          {...fadeIn}
+        >
+          <div className="w-12 h-12 rounded-full bg-white border border-zinc-200 flex items-center justify-center shrink-0 shadow-sm">
+            <AlertCircle
+              className="text-zinc-900"
+              size={24}
+              strokeWidth={1.5}
+            />
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-zinc-900 text-lg mb-2">
+              Nota sobre Acompanhamento da Equipe
+            </h4>
+
+            <p className="text-zinc-600 leading-relaxed">
+              É necessário que o cliente disponibilize uma pessoa da equipe para ser
+              responsável pelo{" "}
+              <strong className="text-zinc-900">
+                monitoramento das conversas realizadas pela IA
+              </strong>
+              , garantindo a intervenção humana sempre que necessário. Essa
+              pessoa deverá assumir chamados direcionados para atendimento
+              humano, tratar situações que a IA não consiga solucionar e
+              conduzir atendimentos que dependam de interação direta, como{" "}
+              <strong className="text-zinc-900">
+                negociações e fechamento de vendas
+              </strong>
+              .
             </p>
           </div>
         </motion.div>
