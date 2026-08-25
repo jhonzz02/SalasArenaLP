@@ -121,7 +121,7 @@ export default function ArenaFonteNovaLanding() {
 
             <ul className="space-y-4">
               {[
-                { icon: Monitor, text: "Tela 10.1 Polegadas" },
+                { icon: Monitor, text: "Tela 14 Polegadas" },
                 { icon: Wifi, text: "Wi-Fi" },
                 {
                   icon: Battery,
