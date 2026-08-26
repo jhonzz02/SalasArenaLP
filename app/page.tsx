@@ -468,7 +468,7 @@ export default function ArenaFonteNovaLanding() {
                   </span>
                 </div>
               </li>
-              <li className="bg-gray-600 border border-gray-500 p-8 rounded-[1.5rem] flex items-center gap-5 flex-1 transition-all hover:border-gray-400 shadow-lg">
+              {/* <li className="bg-gray-600 border border-gray-500 p-8 rounded-[1.5rem] flex items-center gap-5 flex-1 transition-all hover:border-gray-400 shadow-lg">
                 <div className="bg-gray-800 w-14 h-14 rounded-full flex items-center justify-center shrink-0 shadow-inner">
                   <CreditCard
                     className="text-white"
@@ -484,7 +484,7 @@ export default function ArenaFonteNovaLanding() {
                     Parcelamento em até 6x (acrescido das taxas da plataforma).
                   </span>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </motion.div>
 
