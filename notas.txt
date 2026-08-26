@@ -1,0 +1,64 @@
+{/* PAYMENT & DELIVERY - Destaque Gray */}
+
+ <section className="py-32 px-6 lg:px-8 bg-gray-700 border-t border-gray-600">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+          <motion.div {...fadeIn} className="flex flex-col h-full">
+            <h3 className="text-2xl font-bold tracking-tight mb-8 text-white">
+              Pagamento.
+            </h3>
+            <ul className="flex flex-col gap-4 flex-1">
+              <li className="bg-gray-600 border border-gray-500 p-8 rounded-[1.5rem] flex items-center gap-5 flex-1 transition-all hover:border-gray-400 shadow-lg">
+                <div className="bg-gray-800 w-14 h-14 rounded-full flex items-center justify-center shrink-0 shadow-inner">
+                  <CreditCard
+                    className="text-white"
+                    size={24}
+                    strokeWidth={1.5}
+                  />
+                </div>
+                <div>
+                  <strong className="block text-white text-lg font-semibold mb-1">
+                    Pix / Transferência
+                  </strong>
+                  <span className="text-sm text-gray-200">
+                    Pagamento direto com faturamento e emissão de NF.
+                  </span>
+                </div>
+              </li>
+              {/* <li className="bg-gray-600 border border-gray-500 p-8 rounded-[1.5rem] flex items-center gap-5 flex-1 transition-all hover:border-gray-400 shadow-lg">
+                <div className="bg-gray-800 w-14 h-14 rounded-full flex items-center justify-center shrink-0 shadow-inner">
+                  <CreditCard
+                    className="text-white"
+                    size={24}
+                    strokeWidth={1.5}
+                  />
+                </div>
+                <div>
+                  <strong className="block text-white text-lg font-semibold mb-1">
+                    Cartão de Débito/Crédito
+                  </strong>
+                  <span className="text-sm text-gray-200">
+                    Parcelamento em até 6x (acrescido das taxas da plataforma).
+                  </span>
+                </div>
+              </li> */}
+            </ul>
+          </motion.div>
+
+          <motion.div {...fadeIn} className="flex flex-col h-full">
+            <h3 className="text-2xl font-bold tracking-tight mb-8 text-white">
+              Prazo de Entrega.
+            </h3>
+            <div className="bg-gray-600 border border-gray-500 p-10 rounded-[1.5rem] flex-1 flex flex-col justify-center items-center text-center transition-all hover:border-gray-400 shadow-lg">
+              <p className="text-5xl font-bold tracking-tighter text-white mb-4">
+                ~15 dias
+              </p>
+              <p className="text-gray-200 text-lg font-medium">
+                Dias úteis após a confirmação do pedido e pagamento.
+              </p>
+              <p className="text-sm text-gray-300 mt-6 bg-gray-800/50 py-2 px-4 rounded-full">
+                * Sujeito a pequenas variações logísticas.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
