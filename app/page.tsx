@@ -284,6 +284,7 @@ export default function ArenaFonteNovaLanding() {
       </section>
 
       {/* INVESTMENT SECTION - Fundo Branco */}
+
       <section id="investimento" className="py-32 px-6 lg:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
           <motion.div className="text-center mb-16" {...fadeIn}>
@@ -294,85 +295,155 @@ export default function ArenaFonteNovaLanding() {
               Transparência total e tecnologia de ponta em um pacote integrado.
             </p>
           </motion.div>
+         <motion.div
+  className="bg-zinc-50 rounded-[2rem] p-8 md:p-14 border border-zinc-200 shadow-sm relative overflow-hidden"
+  {...fadeIn}
+>
+  {/* HEADER */}
+  <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-zinc-200 pb-10 mb-10">
+    <div>
+      <p className="text-zinc-500 font-medium mb-2 tracking-wide uppercase text-sm">
+        Hardware + Software + Implantação
+      </p>
 
-          <motion.div
-            className="bg-zinc-50 rounded-[2rem] p-8 md:p-14 border border-zinc-200 shadow-sm relative overflow-hidden"
-            {...fadeIn}
-          >
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-zinc-200 pb-10 mb-10">
-              <div>
-                <p className="text-zinc-500 font-medium mb-2 tracking-wide uppercase text-sm">
-                  Hardware + Software + Implantação
-                </p>
-                <h3 className="text-5xl md:text-6xl font-bold tracking-tight text-zinc-900">
-                  R$ 151.200
-                </h3>
-              </div>
-              <div className="mt-6 md:mt-0 bg-white border border-zinc-200 text-zinc-700 px-6 py-3 rounded-full font-medium flex items-center gap-3 text-sm shadow-sm">
-                <CheckCircle2 size={18} className="text-zinc-900" /> 3 Meses
-                Grátis de Licenciamento
-              </div>
-            </div>
+      <h3 className="text-5xl md:text-6xl font-bold tracking-tight text-zinc-900">
+        R$ 151.200
+      </h3>
+    </div>
 
-            <div className="grid md:grid-cols-2 gap-12 text-zinc-600">
-              <div>
-                <h4 className="text-zinc-900 font-semibold text-lg mb-6 flex items-center gap-3">
-                  <Monitor size={20} className="text-zinc-500" /> Composição
-                </h4>
-                <ul className="space-y-5">
-                  <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
-                    <span>100 Tablets + Suportes (R$ ?/unid)</span>
-                    <strong className="text-zinc-900 font-medium">
-                      R$ 120.000,00
-                    </strong>
-                  </li>
-                  <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
-                    <span>Imposto (%12)</span>
-                    <strong className="text-zinc-900 font-medium">
-                      R$ 16.200,00
-                    </strong>
-                  </li>
-                  <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
-                    <span>Desenvolvimento do Sistema</span>
-                    <strong className="text-zinc-900 font-medium">
-                      R$ 15.000,00
-                    </strong>
-                  </li>
-                </ul>
-              </div>
+    <div className="mt-6 md:mt-0 bg-white border border-zinc-200 text-zinc-700 px-6 py-3 rounded-full font-medium flex items-center gap-3 text-sm shadow-sm">
+      <CheckCircle2 size={18} className="text-zinc-900 shrink-0" />
+      <span>3 Meses Grátis de Licenciamento</span>
+    </div>
+  </div>
 
-              <div>
-                <h4 className="text-zinc-900 font-semibold text-lg mb-6 flex items-center gap-3">
-                  <CalendarDays size={20} className="text-zinc-500" /> Após 3
-                  Meses (Licenciamento)
-                </h4>
-                <ul className="space-y-5">
-                  <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
-                    <span>
-                      Valor Inicial{" "}
-                      <span className="text-xs text-zinc-400 block">
-                        20 Salas
-                      </span>
-                    </span>
-                    <strong className="text-zinc-900 font-medium text-right">
-                      R$ 4.000,00/mês
-                    </strong>
-                  </li>
-                  <li className="flex justify-between items-center border-b border-zinc-200 pb-4">
-                    <span>
-                      Valor Adicional por sala{" "}
-                      <span className="text-xs text-zinc-400 block">
-                        até 40 salas
-                      </span>
-                    </span>
-                    <strong className="text-zinc-900 font-medium text-right">
-                      + R$ 100,00/mês por sala
-                    </strong>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </motion.div>
+  {/* CONTEÚDO EM FLEX */}
+  <div className="flex flex-col md:flex-row">
+
+    {/* ================= ESQUERDA ================= */}
+    <div className="flex-1 md:pr-10">
+      <h4 className="text-zinc-900 font-semibold text-lg mb-6 flex items-center gap-3">
+        <Monitor size={20} className="text-zinc-500 shrink-0" />
+        Composição
+      </h4>
+
+      <div className="flex flex-col">
+
+        {/* Tablets */}
+        <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+          <span className="text-zinc-600">
+            100 Tablets + Suportes
+          </span>
+
+          <strong className="text-zinc-900 font-medium whitespace-nowrap">
+            R$ 120.000,00
+          </strong>
+        </div>
+
+        {/* Imposto */}
+        <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+          <span className="text-zinc-600">
+            Imposto (%12)
+          </span>
+
+          <strong className="text-zinc-900 font-medium whitespace-nowrap">
+            R$ 16.200,00
+          </strong>
+        </div>
+
+        {/* Desenvolvimento */}
+        <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+          <span className="text-zinc-600">
+            Desenvolvimento do Sistema
+          </span>
+
+          <strong className="text-zinc-900 font-medium whitespace-nowrap">
+            R$ 15.000,00
+          </strong>
+        </div>
+
+      </div>
+
+      {/* INFORMAÇÕES DO CAMAROTE */}
+      <div className="mt-6 text-sm text-zinc-500 leading-relaxed">
+        <p>
+          <strong className="text-zinc-700">Camarote:</strong> R$ 151,200
+        </p>
+
+        <p>
+          <strong className="text-zinc-700">Quantidade:</strong> 100 camarotes
+        </p>
+
+        <p>
+          <strong className="text-zinc-700">Total:</strong> R$ 1.512/ano
+        </p>
+
+        <p>
+          <strong className="text-zinc-700">Equivalente:</strong> R$ 126/mês
+        </p>
+      </div>
+    </div>
+
+
+    {/* ================= DIVISÓRIA ================= */}
+    <div className="hidden md:block w-px bg-zinc-200" />
+
+
+    {/* ================= DIREITA ================= */}
+    <div className="flex-1 md:pl-10 mt-12 md:mt-0">
+      <h4 className="text-zinc-900 font-semibold text-lg mb-6 flex items-center gap-3">
+        <CalendarDays size={20} className="text-zinc-500 shrink-0" />
+        Após 3 Meses (Licenciamento)
+      </h4>
+
+      <div className="flex flex-col">
+
+        {/* Valor inicial */}
+        <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+          <span className="text-zinc-600">
+            Valor Inicial
+            <span className="text-xs text-zinc-400 block mt-0.5">
+              20 Salas
+            </span>
+          </span>
+
+          <strong className="text-zinc-900 font-medium text-right whitespace-nowrap">
+            R$ 4.000,00/mês
+          </strong>
+        </div>
+
+        {/* Valor adicional */}
+        <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+          <span className="text-zinc-600">
+            Valor Adicional por sala
+            <span className="text-xs text-zinc-400 block mt-0.5">
+              até 40 salas
+            </span>
+          </span>
+
+          <strong className="text-zinc-900 font-medium text-right whitespace-nowrap">
+            + R$ 100,00/mês por sala
+          </strong>
+        </div>
+
+      </div>
+
+      {/* INFORMAÇÕES DAS SALAS */}
+      <div className="mt-6 text-sm text-zinc-500 leading-relaxed">
+        <p>
+          <strong className="text-zinc-700">Valor mensal:</strong>{" "}
+          R$ 4.000 / 20 salas
+        </p>
+
+        <p>
+          <strong className="text-zinc-700">Por sala:</strong>{" "}
+          R$ 200/mês
+        </p>
+      </div>
+    </div>
+
+  </div>
+</motion.div>
         </div>
       </section>
 
@@ -425,8 +496,8 @@ export default function ArenaFonteNovaLanding() {
             </h4>
 
             <p className="text-zinc-600 leading-relaxed">
-              É necessário que o cliente disponibilize uma pessoa da equipe para ser
-              responsável pelo{" "}
+              É necessário que o cliente disponibilize uma pessoa da equipe para
+              ser responsável pelo{" "}
               <strong className="text-zinc-900">
                 monitoramento das conversas realizadas pela IA
               </strong>
@@ -444,7 +515,6 @@ export default function ArenaFonteNovaLanding() {
       </section>
 
       {/* PAYMENT & DELIVERY - Destaque Gray */}
-     
 
       {/* FOOTER */}
       <footer className="bg-gray-700 text-gray-300 py-12 text-center text-sm border-t border-gray-600">
