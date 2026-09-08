@@ -440,7 +440,7 @@ export default function ArenaFonteNovaLanding() {
             {/* OBSERVAÇÃO */}
             <div className="mt-10 pt-6 border-t border-zinc-200">
               <p className="text-sm text-zinc-500 leading-relaxed">
-                <strong className="text-zinc-700">Observação:</strong> R$ 1.000 de forma antecipada destinados à aquisição de amostras para a apresentação.
+                <strong className="text-zinc-700">Observação:</strong> Precisamos de R$ 1.000 de forma antecipada destinados à aquisição de amostras para a apresentação.
               </p>
             </div>
           </motion.div>
