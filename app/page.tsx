@@ -397,10 +397,10 @@ export default function ArenaFonteNovaLanding() {
                   {/* Valor inicial */}
                   <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
                     <span className="text-zinc-600">
-                      Valor Inicial
-                      <span className="text-xs text-zinc-400 block mt-0.5">
+                      Valor Fixo Mensal
+                     {/*  <span className="text-xs text-zinc-400 block mt-0.5">
                         20 Salas
-                      </span>
+                      </span> */}
                     </span>
 
                     <strong className="text-zinc-900 font-medium text-right whitespace-nowrap">
@@ -409,7 +409,7 @@ export default function ArenaFonteNovaLanding() {
                   </div>
 
                   {/* Valor adicional */}
-                  <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+                  {/* <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
                     <span className="text-zinc-600">
                       Valor Adicional por sala
                       <span className="text-xs text-zinc-400 block mt-0.5">
@@ -420,11 +420,11 @@ export default function ArenaFonteNovaLanding() {
                     <strong className="text-zinc-900 font-medium text-right whitespace-nowrap">
                       + R$ 100,00/mês por sala
                     </strong>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* INFORMAÇÕES DAS SALAS */}
-                <div className="mt-6 text-sm text-zinc-500 leading-relaxed">
+              {/*   <div className="mt-6 text-sm text-zinc-500 leading-relaxed">
                   <p>
                     <strong className="text-zinc-700">Valor mensal:</strong> R$
                     4.000 / 20 salas
@@ -434,7 +434,7 @@ export default function ArenaFonteNovaLanding() {
                     <strong className="text-zinc-700">Por sala:</strong> R$
                     200/mês
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
             {/* OBSERVAÇÃO */}
