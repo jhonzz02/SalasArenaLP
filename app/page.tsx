@@ -27,8 +27,7 @@ export default function ArenaFonteNovaLanding() {
   const slides = [
     {
       title: "Integração em tempo real",
-      description:
-        "",
+      description: "",
       image: "/2.png",
     },
     {
@@ -73,8 +72,7 @@ export default function ArenaFonteNovaLanding() {
             <span className="text-gray-400">Arena Fonte Nova.</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
-           A inovação invisível que transforma a experiência
-            corporativa.
+            A inovação invisível que transforma a experiência corporativa.
           </p>
         </motion.div>
       </section>
@@ -203,7 +201,7 @@ export default function ArenaFonteNovaLanding() {
               Veja em ação.
             </h2>
 
-          {/*   <p className="mt-4 text-base md:text-lg max-w-2xl mx-auto">
+            {/*   <p className="mt-4 text-base md:text-lg max-w-2xl mx-auto">
               Experimente a fluidez da integração em tempo real entre a
               interface física e nossa IA.
             </p> */}
@@ -521,7 +519,7 @@ export default function ArenaFonteNovaLanding() {
         </motion.div>
 
         {/* equipe */}
-        {/* <motion.div
+        <motion.div
           className="bg-zinc-50 border border-zinc-200 p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start shadow-sm"
           {...fadeIn}
         >
@@ -535,26 +533,23 @@ export default function ArenaFonteNovaLanding() {
 
           <div>
             <h4 className="font-semibold text-zinc-900 text-lg mb-2">
-              Nota sobre Acompanhamento da Equipe
+              Nota sobre a Equipe
             </h4>
 
             <p className="text-zinc-600 leading-relaxed">
-              É necessário que o cliente disponibilize uma pessoa da equipe para
-              ser responsável pelo{" "}
-              <strong className="text-zinc-900">
-                monitoramento das conversas realizadas pela IA
-              </strong>
-              , garantindo a intervenção humana sempre que necessário. Essa
-              pessoa deverá assumir chamados direcionados para atendimento
-              humano, tratar situações que a IA não consiga solucionar e
-              conduzir atendimentos que dependam de interação direta, como{" "}
-              <strong className="text-zinc-900">
-                negociações e fechamento de vendas
-              </strong>
-              .
+              Será necessário que pelo menos uma pessoa da equipe da Arena seja
+              designada como responsável pelo sistema. Essa pessoa receberá um
+              treinamento completo para utilização da plataforma e ficará
+              responsável por realizar as alterações necessárias, como a mudança
+              entre dias de jogo e dias de escritório. Nossa equipe acompanhará
+              todo o processo de implantação e utilização do sistema,
+              permanecendo sempre disponível para suporte, dúvidas e eventuais
+              necessidades. Além disso, estaremos continuamente acompanhando o
+              funcionamento da solução e buscando melhorias para garantir seu
+              melhor desempenho e evolução.
             </p>
           </div>
-        </motion.div> */}
+        </motion.div>
       </section>
 
       {/* PAYMENT & DELIVERY - Destaque Gray */}
