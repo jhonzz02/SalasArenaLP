@@ -26,15 +26,9 @@ export default function ArenaFonteNovaLanding() {
   };
   const slides = [
     {
-      title: "Automação inteligente",
-      description:
-        "Nossa IA interpreta as solicitações e executa as ações automaticamente.",
-      image: "/1.png",
-    },
-    {
       title: "Integração em tempo real",
       description:
-        "Acompanhe a comunicação entre a interface física e nossa IA.",
+        "",
       image: "/2.png",
     },
     {
@@ -79,8 +73,7 @@ export default function ArenaFonteNovaLanding() {
             <span className="text-gray-400">Arena Fonte Nova.</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium">
-            Automação inteligente e gestão de espaços com IA integrada ao
-            WhatsApp. A inovação invisível que transforma a experiência
+           A inovação invisível que transforma a experiência
             corporativa.
           </p>
         </motion.div>
@@ -163,11 +156,10 @@ export default function ArenaFonteNovaLanding() {
             <div className="mb-8">
               <Bot size={40} className="text-zinc-900 mb-6" strokeWidth={1.5} />
               <h3 className="text-3xl font-semibold tracking-tight mb-3 text-zinc-900">
-                Desenvolvimento & IA.
+                Desenvolvimento.
               </h3>
               <p className="text-zinc-600 text-lg">
-                Integração fluida e inteligente via WhatsApp para reservas
-                instantâneas.
+                Integração fluida e inteligente.
               </p>
             </div>
 
@@ -182,7 +174,6 @@ export default function ArenaFonteNovaLanding() {
             <ul className="space-y-4">
               {[
                 { icon: Smartphone, text: "Sistema web completo" },
-                { icon: Bot, text: "IA integrada diretamente ao WhatsApp" },
                 {
                   icon: CheckCircle2,
                   text: "Configuração e implantação em nuvem",
@@ -202,14 +193,6 @@ export default function ArenaFonteNovaLanding() {
             </ul>
           </motion.div>
         </div>
-        <h2 className="text-4xl font-bold tracking-tight text-zinc-900 mb-4 text-center mt-8">
-          Dashboard
-        </h2>
-        <p className="text-xl text-zinc-500 max-w-4xl mx-auto mt-8">
-          Será disponibilizado um dashboard administrativo, permitindo à equipe
-          gerenciar, acompanhar e consultar os agendamentos de forma
-          centralizada, sempre que necessário.
-        </p>
       </section>
 
       {/* CARROSSEL MANUAL */}
@@ -220,10 +203,10 @@ export default function ArenaFonteNovaLanding() {
               Veja em ação.
             </h2>
 
-            <p className="mt-4 text-base md:text-lg max-w-2xl mx-auto">
+          {/*   <p className="mt-4 text-base md:text-lg max-w-2xl mx-auto">
               Experimente a fluidez da integração em tempo real entre a
               interface física e nossa IA.
-            </p>
+            </p> */}
           </motion.div>
 
           {/* SLIDE */}
@@ -538,7 +521,7 @@ export default function ArenaFonteNovaLanding() {
         </motion.div>
 
         {/* equipe */}
-        <motion.div
+        {/* <motion.div
           className="bg-zinc-50 border border-zinc-200 p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start shadow-sm"
           {...fadeIn}
         >
@@ -571,7 +554,7 @@ export default function ArenaFonteNovaLanding() {
               .
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </section>
 
       {/* PAYMENT & DELIVERY - Destaque Gray */}
