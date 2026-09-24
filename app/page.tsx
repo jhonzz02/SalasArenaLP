@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Monitor,
@@ -51,6 +51,16 @@ export default function ArenaFonteNovaLanding() {
     },
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const infraImages = ["/infra1.jpeg", "/infra3.jpeg"];
+  const [currentInfraSlide, setCurrentInfraSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentInfraSlide((prev) => (prev + 1) % infraImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-gray-300">
       {/* HERO SECTION - Destaque Gray */}
@@ -283,8 +293,56 @@ export default function ArenaFonteNovaLanding() {
         </div>
       </section>
 
-      {/* INVESTMENT SECTION - Fundo Branco */}
+      {/* INFRAESTRUTURA LOCAL - PREVIEW */}
+      <section className="w-full overflow-hidden py-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <motion.div className="text-center mb-16" {...fadeIn}>
+            <h2 className="text-3xl md:text-4xl font-semibold">
+              A nova infraestrutura.
+            </h2>
 
+            <p className="mt-4 text-base md:text-lg max-w-2xl mx-auto">
+              Essa imagem mostra como seria a infraestrutura local após a
+              mudança.
+            </p>
+          </motion.div>
+
+          <motion.div className="w-full" {...fadeIn}>
+            <div className="relative w-full aspect-video overflow-hidden rounded-2xl">
+              {infraImages.map((src, index) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt="Infraestrutura local após a mudança"
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    currentInfraSlide === index ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* INDICADORES */}
+            <div className="flex items-center justify-center gap-2 mt-6">
+              {infraImages.map((_, index) => (
+                <div
+                  key={index}
+                  className={`h-2.5 rounded-full transition-all ${
+                    currentInfraSlide === index
+                      ? "w-8 bg-black"
+                      : "w-2.5 bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
+
+            <p className="text-center mt-4 text-sm text-zinc-400 italic">
+              *imagem meramente ilustrativa gerada por IA
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* INVESTMENT SECTION - Fundo Branco */}
       <section id="investimento" className="py-32 px-6 lg:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
           <motion.div className="text-center mb-16" {...fadeIn}>
@@ -398,7 +456,7 @@ export default function ArenaFonteNovaLanding() {
                   <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
                     <span className="text-zinc-600">
                       Valor Fixo Mensal
-                     {/*  <span className="text-xs text-zinc-400 block mt-0.5">
+                      {/*  <span className="text-xs text-zinc-400 block mt-0.5">
                         20 Salas
                       </span> */}
                     </span>
@@ -424,7 +482,7 @@ export default function ArenaFonteNovaLanding() {
                 </div>
 
                 {/* INFORMAÇÕES DAS SALAS */}
-              {/*   <div className="mt-6 text-sm text-zinc-500 leading-relaxed">
+                {/*   <div className="mt-6 text-sm text-zinc-500 leading-relaxed">
                   <p>
                     <strong className="text-zinc-700">Valor mensal:</strong> R$
                     4.000 / 20 salas
@@ -440,7 +498,9 @@ export default function ArenaFonteNovaLanding() {
             {/* OBSERVAÇÃO */}
             <div className="mt-10 pt-6 border-t border-zinc-200">
               <p className="text-sm text-zinc-500 leading-relaxed">
-                <strong className="text-zinc-700">Observação:</strong> Precisamos de R$ 1.000 de forma antecipada destinados à aquisição de amostras para a apresentação.
+                <strong className="text-zinc-700">Observação:</strong>{" "}
+                Precisamos de R$ 1.000 de forma antecipada destinados à
+                aquisição de amostras para a apresentação.
               </p>
             </div>
           </motion.div>
