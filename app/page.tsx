@@ -146,6 +146,63 @@ export default function ArenaFonteNovaLanding() {
             </ul>
           </motion.div>
 
+          {/* Hardware Card */}
+          <motion.div
+            className="bg-zinc-50 p-10 rounded-[2rem] shadow-sm border border-zinc-200 transition-all hover:border-zinc-300"
+            {...fadeIn}
+          >
+            <div className="mb-8">
+              <Monitor
+                size={40}
+                className="text-zinc-900 mb-6"
+                strokeWidth={1.5}
+              />
+              <h3 className="text-3xl font-semibold tracking-tight mb-3 text-zinc-900">
+                100 Tablets 10" LED + Suportes.
+              </h3>
+              <p className="text-zinc-600 text-lg">
+                Design elegante nas portas das salas. <br></br>
+                (imagem ilustrativa, não representa o modelo final do tablet)
+              </p>
+            </div>
+
+            <div className="w-full h-100 rounded-2xl mb-8 flex flex-col items-center justify-center text-zinc-400 bg-white overflow-hidden relative border border-zinc-200">
+              <div className="absolute inset-0 w-full h-full">
+                <img
+                  src="/tabletled2.png"
+                  alt="Tablet 10 polegadas com LED"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <ul className="space-y-4">
+              {[
+                { icon: Monitor, text: "Tela 10.1 Polegadas" },
+                { icon: Monitor, text: "Com LED" },
+                { icon: Wifi, text: "Wi-Fi" },
+                {
+                  icon: Battery,
+                  text: "Bateria (8000 mAh)",
+                },
+                {
+                  icon: Monitor,
+                  text: "Resolução do display: 1920x1080",
+                },
+              ].map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-4 text-zinc-700 font-medium"
+                >
+                  <div className="w-8 h-8 rounded-full bg-white border border-zinc-200 flex items-center justify-center shrink-0 shadow-sm">
+                    <item.icon size={16} className="text-zinc-900" />
+                  </div>
+                  {item.text}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
           {/* Software & IA Card */}
           <motion.div
             className="bg-zinc-50 p-10 rounded-[2rem] shadow-sm border border-zinc-200 transition-all hover:border-zinc-300"
@@ -338,6 +395,10 @@ export default function ArenaFonteNovaLanding() {
             className="bg-zinc-50 rounded-[2rem] p-8 md:p-14 border border-zinc-200 shadow-sm relative overflow-hidden"
             {...fadeIn}
           >
+            <span className="inline-block mb-6 py-1 px-3 rounded-full bg-white border border-zinc-200 text-zinc-600 text-xs font-semibold tracking-widest uppercase shadow-sm">
+              Tablet 14 polegadas
+            </span>
+
             {/* HEADER */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-zinc-200 pb-10 mb-10">
               <div>
@@ -369,7 +430,7 @@ export default function ArenaFonteNovaLanding() {
                   {/* Tablets */}
                   <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
                     <span className="text-zinc-600">
-                      100 Tablets + Suportes
+                      100 Tablets (14 polegadas) + Suportes
                     </span>
 
                     <strong className="text-zinc-900 font-medium whitespace-nowrap">
@@ -481,6 +542,162 @@ export default function ArenaFonteNovaLanding() {
               <p className="text-sm text-zinc-500 leading-relaxed">
                 <strong className="text-zinc-700">Observação:</strong>{" "}
                 Precisamos de R$ 1.000 de forma antecipada destinados à
+                aquisição de amostras para a apresentação.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* INVESTIMENTO - TABLET 10" COM LED */}
+          <div className="mt-12" />
+          <motion.div
+            className="bg-zinc-50 rounded-[2rem] p-8 md:p-14 border border-zinc-200 shadow-sm relative overflow-hidden"
+            {...fadeIn}
+          >
+            <span className="inline-block mb-6 py-1 px-3 rounded-full bg-white border border-zinc-200 text-zinc-600 text-xs font-semibold tracking-widest uppercase shadow-sm">
+              Tablet 10 polegadas com LED
+            </span>
+
+            {/* HEADER */}
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-zinc-200 pb-10 mb-10">
+              <div>
+                <p className="text-zinc-500 font-medium mb-2 tracking-wide uppercase text-sm">
+                  Hardware + Software + Implantação
+                </p>
+
+                <h3 className="text-5xl md:text-6xl font-bold tracking-tight text-zinc-900">
+                  X
+                </h3>
+              </div>
+
+              <div className="mt-6 md:mt-0 bg-white border border-zinc-200 text-zinc-700 px-6 py-3 rounded-full font-medium flex items-center gap-3 text-sm shadow-sm">
+                <CheckCircle2 size={18} className="text-zinc-900 shrink-0" />
+                <span>3 Meses Grátis de Licenciamento</span>
+              </div>
+            </div>
+
+            {/* CONTEÚDO EM FLEX */}
+            <div className="flex flex-col md:flex-row">
+              {/* ================= ESQUERDA ================= */}
+              <div className="flex-1 md:pr-10">
+                <h4 className="text-zinc-900 font-semibold text-lg mb-6 flex items-center gap-3">
+                  <Monitor size={20} className="text-zinc-500 shrink-0" />
+                  Composição
+                </h4>
+
+                <div className="flex flex-col">
+                  {/* Tablets */}
+                  <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+                    <span className="text-zinc-600">
+                      100 Tablets (10.1 polegadas com LED) + Suportes
+                    </span>
+
+                    <strong className="text-zinc-900 font-medium whitespace-nowrap">
+                      R$ X
+                    </strong>
+                  </div>
+
+                  {/* Imposto */}
+                  <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+                    <span className="text-zinc-600">Imposto (%12)</span>
+
+                    <strong className="text-zinc-900 font-medium whitespace-nowrap">
+                      R$ X
+                    </strong>
+                  </div>
+
+                  {/* Desenvolvimento */}
+                  <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+                    <span className="text-zinc-600">
+                      Desenvolvimento do Sistema
+                    </span>
+
+                    <strong className="text-zinc-900 font-medium whitespace-nowrap">
+                      R$ 15.000,00
+                    </strong>
+                  </div>
+                </div>
+
+                {/* INFORMAÇÕES DO CAMAROTE */}
+                <div className="mt-6 text-sm text-zinc-500 leading-relaxed">
+                  <p>
+                    <strong className="text-zinc-700">Camarote:</strong> R$ X
+                  </p>
+
+                  <p>
+                    <strong className="text-zinc-700">Quantidade:</strong> X
+                    camarotes
+                  </p>
+
+                  <p>
+                    <strong className="text-zinc-700">Total:</strong> R$ X/ano
+                  </p>
+
+                  <p>
+                    <strong className="text-zinc-700">Equivalente:</strong> R$
+                    X/mês
+                  </p>
+                </div>
+              </div>
+
+              {/* ================= DIVISÓRIA ================= */}
+              <div className="hidden md:block w-px bg-zinc-200" />
+
+              {/* ================= DIREITA ================= */}
+              <div className="flex-1 md:pl-10 mt-12 md:mt-0">
+                <h4 className="text-zinc-900 font-semibold text-lg mb-6 flex items-center gap-3">
+                  <CalendarDays size={20} className="text-zinc-500 shrink-0" />
+                  Após 3 Meses (Licenciamento)
+                </h4>
+
+                <div className="flex flex-col">
+                  {/* Valor inicial */}
+                  <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+                    <span className="text-zinc-600">
+                      Valor Fixo Mensal
+                      {/*  <span className="text-xs text-zinc-400 block mt-0.5">
+                        20 Salas
+                      </span> */}
+                    </span>
+
+                    <strong className="text-zinc-900 font-medium text-right whitespace-nowrap">
+                      R$ 4.000,00/mês
+                    </strong>
+                  </div>
+
+                  {/* Valor adicional */}
+                  {/* <div className="flex justify-between items-center gap-4 border-b border-zinc-200 py-4">
+                    <span className="text-zinc-600">
+                      Valor Adicional por sala
+                      <span className="text-xs text-zinc-400 block mt-0.5">
+                        até 40 salas
+                      </span>
+                    </span>
+
+                    <strong className="text-zinc-900 font-medium text-right whitespace-nowrap">
+                      + R$ 100,00/mês por sala
+                    </strong>
+                  </div> */}
+                </div>
+
+                {/* INFORMAÇÕES DAS SALAS */}
+                {/*   <div className="mt-6 text-sm text-zinc-500 leading-relaxed">
+                  <p>
+                    <strong className="text-zinc-700">Valor mensal:</strong> R$
+                    4.000 / 20 salas
+                  </p>
+
+                  <p>
+                    <strong className="text-zinc-700">Por sala:</strong> R$
+                    200/mês
+                  </p>
+                </div> */}
+              </div>
+            </div>
+            {/* OBSERVAÇÃO */}
+            <div className="mt-10 pt-6 border-t border-zinc-200">
+              <p className="text-sm text-zinc-500 leading-relaxed">
+                <strong className="text-zinc-700">Observação:</strong>{" "}
+                Precisamos de R$ 3.000 de forma antecipada destinados à
                 aquisição de amostras para a apresentação.
               </p>
             </div>
