@@ -112,7 +112,7 @@ export default function ArenaFonteNovaLanding() {
                 strokeWidth={1.5}
               />
               <h3 className="text-3xl font-semibold tracking-tight mb-3 text-zinc-900">
-                100 Tablets + Suportes.
+                100 Tablets 14" + Suportes.
               </h3>
               <p className="text-zinc-600 text-lg">
                 Design elegante nas portas das salas. <br></br>
@@ -181,7 +181,7 @@ export default function ArenaFonteNovaLanding() {
                 <img
                   src="/tabletled2.png"
                   alt="Tablet 10 polegadas com LED"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
