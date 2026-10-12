@@ -48,9 +48,19 @@ export default function ArenaFonteNovaLanding() {
   const infraImages = ["/infra1.jpeg", "/infra3.jpeg"];
   const [currentInfraSlide, setCurrentInfraSlide] = useState(0);
 
+  const infraLedImages = ["/displayled1.png", "/displayled2.png"];
+  const [currentInfraLedSlide, setCurrentInfraLedSlide] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentInfraSlide((prev) => (prev + 1) % infraImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentInfraLedSlide((prev) => (prev + 1) % infraLedImages.length);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
@@ -366,6 +376,55 @@ export default function ArenaFonteNovaLanding() {
                   key={index}
                   className={`h-2.5 rounded-full transition-all ${
                     currentInfraSlide === index
+                      ? "w-8 bg-black"
+                      : "w-2.5 bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
+
+            <p className="text-center mt-4 text-sm text-zinc-400 italic">
+              *imagem meramente ilustrativa gerada por IA
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* INFRAESTRUTURA LOCAL - PREVIEW COM TABLETS LED */}
+      <section className="w-full overflow-hidden pb-24">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <motion.div className="text-center mb-16" {...fadeIn}>
+            <h2 className="text-3xl md:text-4xl font-semibold">
+              A nova infraestrutura com LED.
+            </h2>
+
+            <p className="mt-4 text-base md:text-lg max-w-2xl mx-auto">
+              Essa imagem mostra como seria a infraestrutura local após a
+              mudança com tablets com iluminação LED.
+            </p>
+          </motion.div>
+
+          <motion.div className="w-full" {...fadeIn}>
+            <div className="relative w-full aspect-video overflow-hidden rounded-2xl">
+              {infraLedImages.map((src, index) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt="Infraestrutura local após a mudança com tablets com iluminação LED"
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    currentInfraLedSlide === index ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* INDICADORES */}
+            <div className="flex items-center justify-center gap-2 mt-6">
+              {infraLedImages.map((_, index) => (
+                <div
+                  key={index}
+                  className={`h-2.5 rounded-full transition-all ${
+                    currentInfraLedSlide === index
                       ? "w-8 bg-black"
                       : "w-2.5 bg-gray-300"
                   }`}
