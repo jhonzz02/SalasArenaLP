@@ -624,7 +624,7 @@ export default function ArenaFonteNovaLanding() {
                 </p>
 
                 <h3 className="text-5xl md:text-6xl font-bold tracking-tight text-zinc-900">
-                  X
+                  R$ 367.800
                 </h3>
               </div>
 
@@ -651,7 +651,7 @@ export default function ArenaFonteNovaLanding() {
                     </span>
 
                     <strong className="text-zinc-900 font-medium whitespace-nowrap">
-                      R$ X
+                      R$ 315.000,00
                     </strong>
                   </div>
 
@@ -660,7 +660,7 @@ export default function ArenaFonteNovaLanding() {
                     <span className="text-zinc-600">Imposto (%12)</span>
 
                     <strong className="text-zinc-900 font-medium whitespace-nowrap">
-                      R$ X
+                      R$ 37.800,00
                     </strong>
                   </div>
 
@@ -679,21 +679,21 @@ export default function ArenaFonteNovaLanding() {
                 {/* INFORMAÇÕES DO CAMAROTE */}
                 <div className="mt-6 text-sm text-zinc-500 leading-relaxed">
                   <p>
-                    <strong className="text-zinc-700">Camarote:</strong> R$ X
+                    <strong className="text-zinc-700">Camarote:</strong> R$ 367.800
                   </p>
 
                   <p>
-                    <strong className="text-zinc-700">Quantidade:</strong> X
+                    <strong className="text-zinc-700">Quantidade:</strong> 100
                     camarotes
                   </p>
 
                   <p>
-                    <strong className="text-zinc-700">Total:</strong> R$ X/ano
+                    <strong className="text-zinc-700">Total:</strong> R$ 3.678/ano
                   </p>
 
                   <p>
                     <strong className="text-zinc-700">Equivalente:</strong> R$
-                    X/mês
+                    306,50/mês
                   </p>
                 </div>
               </div>
